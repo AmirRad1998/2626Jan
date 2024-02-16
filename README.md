@@ -1,6 +1,7 @@
 Answer 1
 
 
+
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot3_xacro">
 <xacro:include filename="$(find robot_urdf)/urdf/robot3.gazebo"/>
