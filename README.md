@@ -1,3 +1,77 @@
+
+
+Answer 3:
+
+Answer 3:
+
+
+the changes for uing an rgbd cmera
+
+1.  adjusting how we detect markers:
+•  before: we used a camera for seeing and maybe a laser to figure out distances to detect and go towards markers.
+•  with rgbd camera: this camera gives us both color pictures and how far away things are in one device. we'll need to change our detectmarker.py script to use this depth info to more accurately find and know where markers are.
+2.  working with 3d images:
+•  before: not needed since we didn’t use depth data.
+•  with rgbd camera: we use tools in ros to handle 3d images. this helps understand the space around the robot, find obstacles, and move around better.
+3.  better object finding and moving:
+•  before: we used 2d images and maybe laser scans to move around.
+•  with rgbd camera: we use the depth info to better find objects (like markers) and move in space by knowing how far away things are.
+
+
+changes because we don’t know where the waypoints are
+
+1.  exploring and mapping:
+•  before: we had fixed places to go to.
+•  now with unknown places: we make the robot explore on its own. We use methods to have the robot find new areas, make a map, and spot waypoints.
+2.  making waypoints as we go:
+•  before: we had set places to visit.
+•  now with unknown places: we create a system to make new waypoints based on the robot's exploration and mapping. this means analyzing the map in real-time to decide where to go next or look for markers.
+3.  finding markers while exploring:
+•  before: the robot looked for markers as it went to set places.
+•  now with unknown places: we make marker finding part of exploring. the robot should always be on the lookout for markers as it checks out new areas.
+4.  better mapping and waypoints:
+•  before: we used gmapping for mapping and finding its way.
+•  now with unknown places: we make sure our mapping system can handle the new 3d data and update the map with any new waypoints or markers it finds. we might need to use more advanced mapping techniques that work well with 3d data.
+
+
+how we implemet
+
+•  using rgbd for markers: we change the detectmarker.py to use both the pictures and depth data from the rgbd camera. this helps in knowing exactly where the markers are for better movement towards them.
+•  algorithm for exploring: we put in a system that helps the robot find new parts of the area, updating the map with new findings and possible marker spots.
+•  mapping and waypoint handling: we improve how we map with the new 3d data and manage waypoints that come up as we explore. this means changing how we plan routes to include any new spots or markers we find.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 Answer 1
 
 
