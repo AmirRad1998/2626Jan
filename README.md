@@ -1,7 +1,3 @@
-Let's Make it Happen!
-
-
-
 Answer 1
 
 
